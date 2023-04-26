@@ -1,11 +1,36 @@
-/*
-• Vamos a armar el juedo de ”Adivinar el número”. El juego consiste de los siguiente: La
-computadora genera un número aleatorio entre 1 y 10. Luego nos pide que adivinemos el
-número. Si el número que ingresamos es menor que el que genero la maquina nos muestra
-el mensaje ”El número es mayor”. Si el número que ingresamos es mayor nos muestra el
-mensaje ”El número es menor”. Cuando hayamos acertado el valor nos informa del fin del
-juego.
-• Agregue al juego anterior niveles de dificultad.
+const readline = require('readline');
 
-*/
+const nroAleatorio = Math.floor(Math.random() * (10 - 1 + 1) + 1);
 
+function adivinarNumero() {
+  const nroRandom = nroAleatorio;
+
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  let intentos = 0;
+
+  const jugar = () => {
+    rl.question('Ingrese un numero: ', (nroIngresado) => {
+      intentos++;
+      if (nroIngresado == nroRandom) {
+        console.log(`Felicitaciones! Adivinaste el numero "${nroRandom}" en ${intentos} intentos.`);
+        rl.close();
+      } else if (nroIngresado < nroRandom) {
+        console.log('El numero que intentas adivinar es mayor! Intenta de nuevo');
+        jugar();
+      } else {
+        console.log('El numero que intentas adivinar es menor! Intenta de nuevo');
+        jugar();
+      }
+    });
+  };
+
+  jugar();
+}
+
+adivinarNumero();
+
+// TODO: complejidad :/
