@@ -5,7 +5,7 @@ function doStuff(value: any): void {
         console.log(value.toPrecision(5));
     }
 
-    value; // coloque el cursor sobre `valor` aqui
+    value;
 }
 
 doStuff(2);
