@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "",
     "build": "tsc -p tsconfig.json",
-    "start": "node ./dist/ej-2_4.js",
+    "start": "node ./dist/3_1.js",
     "prestart": "npm install && npm run build"
   },
   "author": "",
