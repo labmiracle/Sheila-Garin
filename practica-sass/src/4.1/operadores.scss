@@ -1,0 +1,14 @@
+$width: 100px;
+
+.example {
+    width: $width + 20px;
+    height: $width / 2;
+}
+
+.btn {
+    @if $color-main ==#0074d9 {
+        &:hover {
+            background-color: darkblue;
+        }
+    }
+}

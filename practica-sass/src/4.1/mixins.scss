@@ -1,0 +1,16 @@
+@mixin center($ancho, $alto) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $ancho;
+    width: $alto;
+}
+
+.button {
+    background: darkcyan;
+    color: wheat;
+    padding: 16px 64px;
+    border: 1px solid darkblue;
+    @include center(200px, 50px);
+}

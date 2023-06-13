@@ -1,0 +1,2 @@
+//"sass":"sass styles/main.scss styles/main.css"
+crear carpeta styles y dentro un archivo main.scss y otro base.scss

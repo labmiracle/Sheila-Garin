@@ -1,0 +1,19 @@
+{
+  "name": "practicasass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node ./dist/index.js",
+    "sass":"sass src/4.3/styles/main.scss src/4.3/styles/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.63.3",
+    "typescript": "^5.1.3"
+  }
+}

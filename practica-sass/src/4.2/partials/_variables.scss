@@ -1,0 +1,10 @@
+$color: #44c767;
+$border: 1px solid #18ab29;
+
+.button {
+    background-color: $color;
+    padding: 16px 31px;
+    border-radius: 28px;
+    border: $border;
+    color: #ffffff;
+}

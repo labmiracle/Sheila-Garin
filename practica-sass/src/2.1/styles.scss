@@ -1,0 +1,22 @@
+//mixin que agrega un prefijo de proveedor
+@mixin prefijo($propiedad, $valorProp) {
+    -webkit-#{$propiedad}: $valorProp;
+    -moz-#{$propiedad}: $valorProp;
+    -ms-#{$propiedad}: $valorProp;
+    -o-#{$propiedad}: $valorProp;
+    #{$propiedad}: $valorProp;
+}
+
+//mixin que agrega un margen fijo y relleno (padding)
+@mixin marginPadding($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+//mixin que agrega propiedades de borde
+@mixin border($width, $style, $color, $radius) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+    border-radius: $radius;
+}
