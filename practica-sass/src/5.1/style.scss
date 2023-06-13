@@ -1,0 +1,26 @@
+$primary-color: #ff0000;
+$secondary-color: #00ff00;
+
+@mixin gradient-background($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+}
+
+.my-element {
+    color: $primary-color;
+    @include gradient-background($secondary-color, $primary-color);
+
+    &:hover {
+        color: $secondary-color;
+        @include gradient-background($primary-color, $secondary-color);
+    }
+}
+
+.my-other-element {
+    border: 2px solid $secondary-color;
+    margin: 10px;
+
+    .inner-element {
+        padding: 20px;
+        background-color: lighten($primary-color, 20%);
+    }
+}
