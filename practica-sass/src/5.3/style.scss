@@ -1,0 +1,13 @@
+@function get-color($day) {
+    $colors: (#FF220C, #E93028, #D33E43, #B75B5C, #9B7874, #666370, #1C1F33);
+
+    @return nth($colors, $day);
+}
+
+$days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
+
+@each $day in $days {
+    .#{$day} {
+        background-color: get-color(index($days, $day));
+    }
+}
